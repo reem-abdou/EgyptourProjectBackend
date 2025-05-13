@@ -4,16 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using EgyptourProject.DAL.Data.Models;
-using EgyptourProject.DAL.Models;
 
 namespace EgyptourProject.DAL.Repository
 {
     public interface IAdminRepository
     {
-        public IQueryable<AdminRepository> GetAll();
+        public IQueryable<Admin> GetAll();
         public Admin GetById(int id);
-        void Update(Admin A);
-        void Delete(Admin A);
-        void SaveChanges(Admin A);
+        public void Add(Admin admin);
+        public void Update(Admin admin);
+        public void Delete(Admin admin);
+        public void SaveChanges();
     }
 }

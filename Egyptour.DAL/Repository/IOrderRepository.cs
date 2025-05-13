@@ -1,0 +1,20 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using EgyptourProject.DAL.Models;
+
+namespace EgyptourProject.DAL.Repository
+{
+    public interface IOrderRepository
+    {
+        IQueryable<Order> GetAll();
+        Order GetById(int id);
+        void Add(Order order);
+
+        void Update(Order order);
+        void Delete(Order order);
+        void SaveChanges();
+    }
+}

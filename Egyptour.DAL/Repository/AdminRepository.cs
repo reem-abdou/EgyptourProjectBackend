@@ -3,45 +3,41 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using EgyptourProject.DAL.Data.Models;
-using EgyptourProject.DAL.Models;
 using Microsoft.EntityFrameworkCore;
+using EgyptourProject.DAL.Data.Models;
 
 namespace EgyptourProject.DAL.Repository
 {
-    public class AdminRepository:IAdminRepository
+    public class AdminRepository: IAdminRepository
     {
         private readonly EgyptourContext _context;
         public AdminRepository(EgyptourContext context)
         {
             _context = context;
         }
-        public IQueryable<AdminRepository> GetAll()
+        public IQueryable<Admin> GetAll()
         {
-            return (IQueryable<AdminRepository>)(IQueryable)_context.Admins.AsNoTracking();
+            return _context.Admins.AsNoTracking();
         }
         public Admin GetById(int id)
         {
-            return _context.Admins.Find();
-
+            return _context.Admins.Find(id);
         }
-        public void Register(Admin A)
+        public void Add(Admin admin)
         {
-            _context.Admins.Add(A);
+            _context.Admins.Add(admin);
         }
-        public void Update(Admin A)
+        public void Update(Admin admin)
         {
-
+            _context.Admins.Update(admin);
         }
-        public void Delete(Admin A)
+        public void Delete(Admin admin)
         {
-            _context.Remove(A);
+            _context.Admins.Remove(admin);
         }
-        public void SaveChanges(Admin A)
+        public void SaveChanges()
         {
             _context.SaveChanges();
         }
-
-
     }
 }

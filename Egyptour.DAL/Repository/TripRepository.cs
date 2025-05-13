@@ -8,43 +8,41 @@ using Microsoft.EntityFrameworkCore;
 
 namespace EgyptourProject.DAL.Repository
 {
-    public class ClientRepository:IClientRepository
+    public class TripRepository:ITripRepository
     {
-
         private readonly EgyptourContext _context;
-        public ClientRepository(EgyptourContext context)
+        public TripRepository(EgyptourContext context)
         {
             _context = context;
         }
-        public IQueryable<Client> GetAll()
+        public IQueryable<Trip> GetAll()
         {
-            return _context.Clients.AsNoTracking();
+            return _context.Trips.AsNoTracking();
         }
 
-        public Client GetById(int id)
+        public Trip GetById(int id)
         {
-            return _context.Clients.Find(id);
+            return _context.Trips.Find(id);
         }
 
-        public void Add(Client C)
+        public void Add(Trip T)
         {
-            _context.Clients.Add(C);
+            _context.Trips.Add(T);
         }
 
-        public void Update(Client C)
+        public void Update(Trip T)
         {
-            _context.Clients.Update(C);
+            _context.Trips.Update(T);
         }
 
-        public void Delete(Client C)
+        public void Delete(Trip T)
         {
-            _context.Clients.Remove(C);
+            _context.Trips.Remove(T);
         }
 
         public void SaveChanges()
         {
             _context.SaveChanges();
         }
-
     }
 }

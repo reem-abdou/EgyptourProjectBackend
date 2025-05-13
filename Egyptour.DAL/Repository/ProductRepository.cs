@@ -8,37 +8,36 @@ using Microsoft.EntityFrameworkCore;
 
 namespace EgyptourProject.DAL.Repository
 {
-    public class ClientRepository:IClientRepository
+    public class ProductRepository:IProductRepository
     {
-
         private readonly EgyptourContext _context;
-        public ClientRepository(EgyptourContext context)
+        public ProductRepository(EgyptourContext context)
         {
             _context = context;
         }
-        public IQueryable<Client> GetAll()
+        public IQueryable<Product> GetAll()
         {
-            return _context.Clients.AsNoTracking();
+            return _context.Products.AsNoTracking();
         }
 
-        public Client GetById(int id)
+        public Product GetById(int id)
         {
-            return _context.Clients.Find(id);
+            return _context.Products.Find(id);
         }
 
-        public void Add(Client C)
+        public void Add(Product P)
         {
-            _context.Clients.Add(C);
+            _context.Products.Add(P);
         }
 
-        public void Update(Client C)
+        public void Update(Product P)
         {
-            _context.Clients.Update(C);
+            _context.Products.Update(P);
         }
 
-        public void Delete(Client C)
+        public void Delete(Product P)
         {
-            _context.Clients.Remove(C);
+            _context.Products.Remove(P);
         }
 
         public void SaveChanges()

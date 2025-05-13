@@ -17,33 +17,13 @@ namespace EgyptourProject.DAL
             optionsBuilder.UseSqlServer("Server=DESKTOP-5GNHTUN;Database=CodeFirst;Integrated Security=true;Encrypt=True");
             base.OnConfiguring(optionsBuilder);
         }
-        public DbSet<Client> Clients { get; set; }
-        public DbSet<TravelAgency> TravelAgencies { get; set; }
+        public DbSet<User> Users { get; set; }
         public DbSet<Admin> Admins { get; set; }
-        public DbSet<BusinessOwner> Shops { get; set; }
-
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<User>(entity =>
-            {
-                entity.Property(u => u.Email)
-                    .IsRequired();
-
-                entity.Property(u => u.UserName)
-                    .IsRequired();
-
-                entity.Property(u => u.Email)
-                    .IsRequired();
-            });
-
-            modelBuilder.Entity<Trip>(entity =>
-            {
-                entity.Property(u => u.TripDescription)
-                    .HasMaxLength(1000);
-            }
-
-
-            );
-        }
+        public DbSet<Client> Clients { get; set; }
+        public DbSet<Trip> Trips { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Booking> Bookings { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderItem> OrderItems { get; set; }
     }
 }

@@ -11,8 +11,9 @@ namespace EgyptourProject.DAL.Repository
     {
         public IQueryable<Client> GetAll();
         public Client GetById(int id);
-        void Update(Client C);
-        void Delete(Client C);
-        void SaveChanges(Client C);
+        public void Add(Client C);
+        public void Update(Client C);
+        public void Delete(Client C);
+        public void SaveChanges();
     }
 }
