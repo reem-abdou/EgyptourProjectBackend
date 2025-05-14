@@ -4,9 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EgyptourProject.DAL.Data.Models
+namespace EgyptourProject.DAL.Repository
 {
-    internal interface IRepository
+    public interface IRepository<T> where T : class
     {
+        Task<T> GetByIdAsync(int id);
+        Task<IEnumerable<T>> GetAllAsync();
+        Task AddAsync(T entity);
+        Task UpdateAsync(T entity);
+        Task DeleteAsync(int id);
+        Task SaveChangesAsync();
     }
 }

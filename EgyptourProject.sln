@@ -1,14 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35931.197 d17.13
+VisualStudioVersion = 17.13.35931.197
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EgyptourProject.API", "EgyptourProject\EgyptourProject.API.csproj", "{3DE3A9E1-01C9-4BCE-822E-177863931B02}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EgyptourProject.BLL", "EgyptourProject.DLL\EgyptourProject.BLL.csproj", "{D5DE51AE-46A0-4A9A-93A0-9810D80B4025}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EgyptourProject.DAL", "Egyptour.DAL\EgyptourProject.DAL.csproj", "{88CAD1A3-2D46-411F-BB83-D0AAF78ED348}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EgyptourProject.BLL", "C:\Users\Reem\source\repos\EgyptourProject\EgyptourProjectBLL\EgyptourProject.BLL.csproj", "{NEW_GUID_HERE}"
+EndProjectEndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,10 +19,6 @@ Global
 		{3DE3A9E1-01C9-4BCE-822E-177863931B02}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3DE3A9E1-01C9-4BCE-822E-177863931B02}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3DE3A9E1-01C9-4BCE-822E-177863931B02}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D5DE51AE-46A0-4A9A-93A0-9810D80B4025}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D5DE51AE-46A0-4A9A-93A0-9810D80B4025}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D5DE51AE-46A0-4A9A-93A0-9810D80B4025}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D5DE51AE-46A0-4A9A-93A0-9810D80B4025}.Release|Any CPU.Build.0 = Release|Any CPU
 		{88CAD1A3-2D46-411F-BB83-D0AAF78ED348}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{88CAD1A3-2D46-411F-BB83-D0AAF78ED348}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88CAD1A3-2D46-411F-BB83-D0AAF78ED348}.Release|Any CPU.ActiveCfg = Release|Any CPU

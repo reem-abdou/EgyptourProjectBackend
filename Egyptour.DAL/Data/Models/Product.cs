@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using EgyptourProject.DAL.Data.Models;
 
 namespace EgyptourProject.DAL.Models
 {
@@ -16,7 +17,7 @@ namespace EgyptourProject.DAL.Models
 
         
         [Required(ErrorMessage = "Please select a category")]
-        public string ProductCategory { get; set; }
+        public ProductCategory ProductCategory { get; set; }
 
 
         [Required(ErrorMessage = "Quantity is required")]
@@ -43,6 +44,7 @@ namespace EgyptourProject.DAL.Models
         [RegularExpression(@"^(https?://|/).+\.(jpg|jpeg|png|gif|webp)$",
         ErrorMessage = "Must be a valid image URL ending with .jpg, .jpeg, .png, .gif, or .webp")]
         public string ProfileImagePath { get; set; }
+        public bool IsFeatured { get; set; }
 
     }
 }

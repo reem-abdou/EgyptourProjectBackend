@@ -8,43 +8,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace EgyptourProject.DAL.Repository
 {
-    public class ClientRepository:IClientRepository
+    public class ClientRepository : Repository<Client>, IRepository<Client>
     {
-
-        private readonly EgyptourContext _context;
-        public ClientRepository(EgyptourContext context)
-        {
-            _context = context;
-        }
-        public IQueryable<Client> GetAll()
-        {
-            return _context.Clients.AsNoTracking();
-        }
-
-        public Client GetById(int id)
-        {
-            return _context.Clients.Find(id);
-        }
-
-        public void Add(Client C)
-        {
-            _context.Clients.Add(C);
-        }
-
-        public void Update(Client C)
-        {
-            _context.Clients.Update(C);
-        }
-
-        public void Delete(Client C)
-        {
-            _context.Clients.Remove(C);
-        }
-
-        public void SaveChanges()
-        {
-            _context.SaveChanges();
-        }
+        public ClientRepository(EgyptourContext context) : base(context) { }
 
     }
 }
