@@ -12,11 +12,11 @@ namespace EgyptourProject.DAL
     public class EgyptourContext : DbContext
     {
         public EgyptourContext(DbContextOptions<EgyptourContext> options) : base(options) { }
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer("Server=DESKTOP-5GNHTUN;Database=CodeFirst;Integrated Security=true;Encrypt=True");
-            base.OnConfiguring(optionsBuilder);
-        }
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    optionsBuilder.UseSqlServer("Server=DESKTOP-5GNHTUN;Database=CodeFirst;Integrated Security=true;Encrypt=True");
+        //    base.OnConfiguring(optionsBuilder);
+        //}
         public DbSet<User> Users { get; set; }
         public DbSet<Admin> Admins { get; set; }
         public DbSet<Client> Clients { get; set; }
