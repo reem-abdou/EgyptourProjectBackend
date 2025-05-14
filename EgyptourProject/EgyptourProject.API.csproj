@@ -25,4 +25,8 @@
     <Folder Include="Properties\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Egyptour.DAL\EgyptourProject.DAL.csproj" />
+  </ItemGroup>
+
 </Project>
